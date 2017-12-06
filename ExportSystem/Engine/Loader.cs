@@ -45,6 +45,9 @@ namespace ExportSystem.Engine
 
             foreach(var index in indexes)
             {
+                if (index - 1 < 0 || index + 1 >= magickTable.Length)
+                    throw new Exception("XDDDD - damaged input file");
+
                 string name = magickTable[index - 1];
                 string value = magickTable[index + 1];
                 if (index != indexes.Last())

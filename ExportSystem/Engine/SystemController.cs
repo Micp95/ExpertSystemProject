@@ -64,7 +64,7 @@ namespace ExportSystem.Engine
 
         private void TryActiveRoles()
         {
-            List<Role> inActiveRoles = new List<Role>();
+            List<Role> inactiveRoles = new List<Role>();
             List<Variable> newKnowledge = new List<Variable>();
 
             foreach(var role in _roles)
@@ -72,10 +72,10 @@ namespace ExportSystem.Engine
                 if (role.IsActive(_knowledgeBase))
                     newKnowledge.Add(role.Result);
                 else
-                    inActiveRoles.Add(role);
+                    inactiveRoles.Add(role);
             }
 
-           _roles = inActiveRoles;
+           _roles = inactiveRoles;
            _knowledgeBase.AddRange(newKnowledge);
         }
 
