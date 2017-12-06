@@ -1,0 +1,8 @@
+if algorithms is true then level is LowLevel
+if algorithms is false then level is HighLevel
+if compilations is true then lang is compiledLang
+if compilations is false then lang is scriptingLang
+if lang is compiledLang and level is LowLevel then language is C++
+if lang is compiledLang and level is HighLevel and notMicrosoft is false then language is C#
+if lang is compiledLang and level is HighLevel and notMicrosoft is true then language is Java
+if lang is scriptingLang then language is Python
